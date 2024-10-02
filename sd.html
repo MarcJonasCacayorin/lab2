@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LogIn</title>
+	<link rel="stylesheet" type="text/css" href="sty.css">+
+	<style type="text/css">
+		body{
+	background: linear-gradient(black, orange);
+	background-repeat: no-repeat;
+	background-attachment: fixed ;
+	
+}
+h1{
+	color: black;
+	padding: 20px;
+}
+p{
+	color: black;
+	padding: 20px;
+}
+.wap{
+	border-color: grey;
+	border-width: 5px;
+	border-radius: 30px ;
+	height: 550px;
+	width: 350px;
+	margin:100px auto;
+	text-align:center;
+	background: linear-gradient(white, grey);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.wrap input{
+	margin:auto;
+}
+Marc
+Marc Cacayrin
+
+
+	</style>
+</head>
+<body>
+	<script>
+		function Login() {
+			var correctUsername ="asd";
+			var correctPassword ="123";
+			var typeusername = document.getElementById("username").value;
+			var typepassword = document.getElementById("password").value;
+			var notifElement = document.getElementById("notif");
+			if(correctUsername==typeusername&&correctPassword==typepassword){
+				document.getElementById("notif").innerText="Login Successfully";
+				window.location="C:\Users\HP\Desktop\calculator.html";
+			}else{
+				document.getElementById("notif").innerText= "Login Failed. Please try again.";
+				Location.href="new.html";
+			}
+		} 
+	</script>
+
+<div class="wap">
+		<h1 align="center">LogIn</h1>
+		<p align="center">Username:  </p>
+		<input id="username" type="text">
+		
+		<p align="center"> Password</p>
+		<input id="password" type="password">
+		
+		<button class="dd" onclick="Login()" style="background-color: green; color: #fff">Login</button>
+		<p id="notif"></p>
+	</div>
+</body>
+</html>
